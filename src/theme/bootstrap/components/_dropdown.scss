@@ -1,0 +1,12 @@
+.dropdown-menu {
+  --bs-dropdown-font-size: var(--bs-body-font-size);
+  --bs-dropdown-link-active-bg: #e7e7e7;
+  --bs-border-width: 0px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.15);
+
+  .dropdown-item.active,
+  .dropdown-item:active {
+    --bs-dropdown-link-active-color: #000;
+    --bs-dropdown-link-active-bg: #e7e7e7;
+  }
+}

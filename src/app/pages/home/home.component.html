@@ -1,0 +1,519 @@
+<main-header [floatingBottom]="true"></main-header>
+
+<section class="hero hero-overlay d-flex align-items-start justify-content-start flex-column py-5" style="background-image: url('./assets/images/cover1.jpg'); background-position: top;">
+  <div class="container position-relative d-flex align-items-start justify-content-start flex-column">
+    <h1 class="fn-60 mb-2 text-light text-uppercase" data-aos="fade-right" data-aos-duration="1000">Miroh Master Broker,</h1>
+    <p class="fn-20 text-light text-uppercase" style="max-width:500px;" data-aos="fade-right" data-aos-duration="1000">La inversión de tus sueños.</p>
+  </div>
+</section>
+
+<section class="text-bg-light py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 d-flex align-items-center justify-content-center">
+        <div class="d-flex align-items-center justify-content-center p-3 text-bg-white" style="width: 350px; height: 350px; border-radius: 50%; overflow: hidden;">
+          <figure class="d-flex align-items-center justify-content-center" style="width: 100%; height: 100%; border-radius: 50%; overflow: hidden;" data-aos="zoom-in" data-aos-duration="1000">
+            <img src="./assets/equipo/equipo3.jpg" class="h-100">
+          </figure>
+        </div>
+      </div>
+      <div class="col-6 d-flex align-items-end justify-content-center flex-column">
+        <h2 class="fn-50 text-end text-uppercase mb-5" data-aos="fade-right" data-aos-duration="1000">Creando la nueva era<br>de Real Estate<br>de lujo</h2>
+        <div class="d-flex align-items-center justify-content-end">
+          <a routerLink="/nosotros" class="d-flex align-items-center justify-content-center fn-20" data-aos="fade-right" data-aos-duration="1000">Saber más sobre nosotros<i class="bi bi-arrow-bar-right fn-30 ms-2"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <h2 class="fn-50 text-uppercase d-flex align-items-center justify-content-start" data-aos="fade-right" data-aos-duration="1000"><span class="fn-30 me-2"><i class="bi bi-star-fill"></i></span>Propiedades</h2>
+        <h3 class="text-muted text-uppercase fw-bold" data-aos="fade-right" data-aos-duration="1000">Recomendadas.</h3>
+      </div>
+      <div class="col-8">
+        <div class="row mb-5">
+          @for (item of propertiesList; track $index) {
+            <div class="col-6 {{(($index > 1) ? 'mt-4' : '')}}" data-aos="fade-up" data-aos-duration="1000">
+              <property-thumb [data]="item"></property-thumb>
+            </div>
+          }
+        </div>
+        <div class="d-flex align-items-center justify-content-end">
+          <a routerLink="/propiedades" class="d-flex align-items-center justify-content-center fn-20" data-aos="fade-right" data-aos-duration="1000">Ver todas las propiedades<i class="bi bi-arrow-bar-right fn-30 ms-2"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto" class="text-bg-light py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <h2 class="fn-50 text-uppercase d-flex align-items-center justify-content-start" data-aos="fade-right" data-aos-duration="1000"><span class="fn-30 me-2"><i class="bi bi-chat-text-fill"></i></span>Nuestro</h2>
+        <h3 class="text-muted text-uppercase fw-bold" data-aos="fade-right" data-aos-duration="1000">Contacto.</h3>
+      </div>
+      <div class="col-8">
+        <div class="d-flex align-items-center justify-content-center mb-4">
+          <div class="d-flex align-items-center justify-content-center flex-column p-4 text-bg-white rounded-3" style="width: calc(100% / 3); height: 200px;" data-aos="fade-up" data-aos-duration="1000">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="rgba(0,0,0,0.4)" class="bi bi-person-hearts mb-2" viewBox="0 0 16 16">
+              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z" />
+            </svg>
+            <h4 class="text-center"><small>Correo electrónico</small></h4>
+            <p class="fs-5 fw-light m-0 text-center"><a href="mailto:info&#64;mirohmasterbroker.com" target="_blank"><small>info&#64;mirohmasterbroker.com</small></a></p>
+          </div>
+          <div class="d-flex align-items-center justify-content-center flex-column p-4 text-bg-white rounded-3 mx-4" style="width: calc(100% / 3); height: 200px;" data-aos="fade-up" data-aos-duration="1000">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="rgba(0,0,0,0.4)" class="bi bi-people-fill mb-2" viewBox="0 0 16 16">
+              <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+            </svg>
+            <h4 class="text-center"><small>Whatsapp</small></h4>
+            <p class="fs-5 fw-light m-0 text-center"><a href="https://api.whatsapp.com/send?phone=529841357245" target="_blank"><small>+52 (984) 135 7245</small></a></p>
+          </div>
+          <div class="d-flex align-items-center justify-content-center flex-column p-4 text-bg-white rounded-3" style="width: calc(100% / 3); height: 200px;" data-aos="fade-up" data-aos-duration="1000">
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="rgba(0,0,0,0.4)" class="bi bi-currency-dollar mb-2" viewBox="0 0 16 16">
+              <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+              <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+            </svg>
+            <h4 class="text-center"><small>Oficina</small></h4>
+            <p class="fs-5 fw-light m-0 text-center"><small>Tulum, Quintana Roo.</small></p>
+          </div>
+        </div>
+        <div ngbAccordion [closeOthers]="true">
+          <div ngbAccordionItem [collapsed]="true" class="border-0 mb-2" data-aos="fade-up" data-aos-duration="1000">
+            <h2 ngbAccordionHeader>
+              <button ngbAccordionButton class="text-bg-white shadow-none rounded-3 fs-5 fw-light">
+                ¿Deseas que nosotros nos pongamos en contacto contigo?
+              </button>
+            </h2>
+            <div ngbAccordionCollapse class="">
+              <div ngbAccordionBody>
+                <ng-template>
+                  <form>
+                    <div class="d-flex flex-column gap-2 mb-3">
+                      <h5><small>Nombre</small></h5>
+                      <input type="text" pInputText class="w-100 h-50px" placeholder="Escribe tu primer nombre..." />
+                    </div>
+                    <div class="d-flex flex-column gap-2 mb-3">
+                      <h5><small>Apellido</small></h5>
+                      <input type="text" pInputText class="w-100 h-50px" placeholder="Escribe tu primer apellido..." />
+                    </div>
+                    <hr class="mt-4">
+                    <div class="d-flex flex-column gap-2 mb-3">
+                      <h5><small>¿Cuál es tu destino de interes?</small></h5>
+                      <input type="text" pInputText class="w-100 h-50px" placeholder="Escribe tu destino de interes..." />
+                    </div>
+                    <div class="d-flex flex-column gap-2 mb-3">
+                      <h5><small>¿Qué tipo de propiedad buscas?</small></h5>
+                      <select pInputText class="w-100 h-50px">
+                        <option>Terrenos / Lotes</option>
+                        <option>Casas</option>
+                        <option>Departamento</option>
+                        <option>Comercial</option>
+                        <option>Renta</option>
+                      </select>
+                    </div>
+                    <div class="d-flex flex-column gap-2 mb-3">
+                      <h5><small>¿Qué uso le vas a dar a tu vivienda?</small></h5>
+                      <select pInputText class="w-100 h-50px">
+                        <option>Vivir</option>
+                        <option>Vivir/Rentar</option>
+                        <option>Inversión</option>
+                        <option>Soy inmobiliario</option>
+                      </select>
+                    </div>
+                    <div class="d-flex flex-column gap-2 mb-3">
+                      <h5><small>¿Cuál es tu presupuesto aproximado?</small></h5>
+                      <select pInputText class="w-100 h-50px">
+                        <option>$100,000 - $200,000 USD</option>
+                        <option>$200,000 - $500,000 USD</option>
+                        <option>$500,000 - $1,000,000 USD</option>
+                        <option>+ $1,000,000 USD</option>
+                      </select>
+                    </div>
+                    <div class="d-flex flex-column gap-2 mb-3">
+                      <h5><small>¿Solicitarás financiamiento para la compra de tu inmueble?</small></h5>
+                      <select pInputText class="w-100 h-50px">
+                        <option>No necesito</option>
+                        <option>Crédito hipotecario</option>
+                      </select>
+                    </div>
+                    <div class="d-flex flex-column gap-2 mb-3">
+                      <h5><small>¿Cuando quisieras invertir?</small></h5>
+                      <select pInputText class="w-100 h-50px">
+                        <option>En los próximos 3 meses</option>
+                        <option>En 6 meses</option>
+                        <option>Mas de 1 año</option>
+                        <option>¡Ya estoy listo!</option>
+                      </select>
+                    </div>
+                    <hr class="mt-4">
+                    <div class="d-flex flex-column gap-2 mb-3">
+                      <h5><small>Correo electrónico</small></h5>
+                      <input type="text" pInputText class="w-100 h-50px" placeholder="Escribe tu correo electrónico..." />
+                    </div>
+                    <div class="d-flex flex-column gap-2 mb-3">
+                      <h5><small>Teléfono</small></h5>
+                      <input type="text" pInputText class="w-100 h-50px" placeholder="Escribe tu número telefónico..." />
+                    </div>
+                    <div class="d-flex align-items-center justify-content-end">
+                      <button type="button" class="btn btn-primary"><i class="bi bi-envelope-fill me-2"></i>Enviar respuestas por correo electrónico</button>
+                    </div>
+                  </form>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="preguntas-frecuentes" class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <h2 class="fn-50 text-uppercase d-flex align-items-center justify-content-start" data-aos="fade-right" data-aos-duration="1000"><span class="fn-30 me-2"><i class="bi bi-patch-question-fill"></i></span>Preguntas</h2>
+        <h3 class="text-muted text-uppercase fw-bold" data-aos="fade-right" data-aos-duration="1000">Frecuentes.</h3>
+      </div>
+      <div class="col-8">
+        <div ngbAccordion [closeOthers]="true" data-aos="fade-up" data-aos-duration="1000">
+          <div ngbAccordionItem [collapsed]="false" class="border-0 mb-2">
+            <h2 ngbAccordionHeader>
+              <button ngbAccordionButton class="text-bg-light shadow-none rounded-3 fs-5 fw-light">
+                ¿Pueden los extranjeros poseer legalmente terrenos y bienes raíces en México?
+              </button>
+            </h2>
+            <div ngbAccordionCollapse class="">
+              <div ngbAccordionBody>
+                <ng-template>
+                  <p class="fs-5 fw-light m-0 text-justify">La respuesta corta es ¡SÍ! Por supuesto, hay pasos legales que deberá seguir al comprar una propiedad en México como extranjero, pero con nuestra ayuda y orientación, pronto descubrirá que el proceso es simple y fácil de entender. En resumen, los extranjeros de cualquier nacionalidad pueden poseer legalmente una propiedad a través de un fideicomiso bancario conocido como Fideicomiso que se establece cuando compra bienes raíces en México. Como en todo el mundo, México tiene sus propios procesos administrativos para la compra de bienes raíces. Este proceso no es difícil ni fácil, pero es uno en el que debe estar seguro de que un agente inmobiliario profesional en México lo mantendrá informado y le brindará un asesoramiento imparcial. Nuestros agentes profesionales de Grupo MIROH están a su disposición para cualquier pregunta o aclaración sobre la compra o venta de bienes raíces y, específicamente, en el Caribe mexicano.</p>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+          <div ngbAccordionItem [collapsed]="true" class="border-0 mb-2">
+            <h2 ngbAccordionHeader>
+              <button ngbAccordionButton class="text-bg-light shadow-none rounded-3 fs-5 fw-light">
+                ¿Qué es la Zona Restringida? ¿Y dónde se encuentra?
+              </button>
+            </h2>
+            <div ngbAccordionCollapse class="">
+              <div ngbAccordionBody>
+                <ng-template>
+                  <p class="fs-5 fw-light m-0 text-justify">Aquí en la zona costera de Tulum, Playa del Carmen, Cancún o la Riviera Maya
+                    estamos en la zona restringida. La zona restringida es el territorio desde la costa de
+                    México hasta 50 kilómetros (30.5 millas) terrestres, o 100 kilómetros (61 millas) desde
+                    cualquier frontera de México. ¿Por qué? Después de una historia de invasiones, guerras y pérdidas de
+                    territorio, el artículo 27 de la Constitución Mexicana fue creado en 1917 para proteger a
+                    México de la intervención e invasión extranjera. Su propósito era evitar que intereses
+                    extranjeros compraran zonas costeras y fronterizas estratégicas del país.
+                    Aunque hoy el peligro de un ataque extranjero es mínimo, esta ley sigue siendo
+                    un capítulo fundamental de la Constitución Mexicana. Actualmente, la zona restringida
+                    es meramente un legado de la cultura e historia mexicanas, y no una herramienta para impedir la inversión extranjera en México. Para reforzar este mensaje, se creó la Ley de Inversión Extranjera de México
+                    (promulgada el 28 de diciembre de 1993) para proteger los derechos de los
+                    extranjeros en zonas restringidas y garantizar la compra/adquisición segura y legal de bienes inmuebles. En toda la costa del Caribe mexicano,
+                    los extranjeros pueden comprar, sin embargo la Ley de Inversión Extranjera de México exige que lo hagan
+                    a través de un fideicomiso.</p>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+          <div ngbAccordionItem [collapsed]="true" class="border-0 mb-2">
+            <h2 ngbAccordionHeader>
+              <button ngbAccordionButton class="text-bg-light shadow-none rounded-3 fs-5 fw-light">
+                ¿Qué es un fideicomiso?
+              </button>
+            </h2>
+            <div ngbAccordionCollapse class="">
+              <div ngbAccordionBody>
+                <ng-template>
+                  <p class="fs-5 fw-light m-0 text-justify">Si estás familiarizado con los fideicomisos en Estados Unidos, verás que los fideicomisos mexicanos
+                    son muy similares. En resumen, el título de propiedad se inscribe en el registro público. Se
+                    estipulará que el banco crea el fideicomiso y el comprador extranjero es el beneficiario
+                    (dueño del inmueble). El contrato de fideicomiso se formaliza mediante la emisión de un permiso de
+                    la Secretaría de Relaciones Exteriores. El comprador extranjero es designado como el
+                    beneficiario en el fideicomiso y sus derechos son inscritos en el registro público por un Notario Público. El beneficiario tiene todos los derechos sin restricción como cualquier propietario
+                    del inmueble: puede usar, tener posesión, alquilar, vivir y hacer modificaciones.
+                    Así como la facultad de instruir al banco para hipotecar el inmueble, venderlo, transferir los
+                    beneficios a otra persona y cualquier otro acto dentro de la ley, derivado de ser propietario de un inmueble. Si el extranjero vende el inmueble a otro extranjero, puede
+                    ceder sus intereses al nuevo comprador. Esta cesión de derechos deberá formalizarse
+                    ante Notario Público Mexicano, previo al pago de los impuestos federales y locales
+                    derivados de la transmisión de los derechos del beneficiario. El propietario extranjero tendrá
+                    la obligación de pagar los derechos del terreno, por ejemplo: el pago anual del
+                    impuesto predial, las cuotas de mantenimiento del condominio, agua, luz, la cuota anual del Fideicomiso, etc.</p>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+          <div ngbAccordionItem [collapsed]="true" class="border-0 mb-2">
+            <h2 ngbAccordionHeader>
+              <button ngbAccordionButton class="text-bg-light shadow-none rounded-3 fs-5 fw-light">
+                ¿Puede mi familia heredar mi propiedad inmobiliaria en México?
+              </button>
+            </h2>
+            <div ngbAccordionCollapse class="">
+              <div ngbAccordionBody>
+                <ng-template>
+                  <p class="fs-5 fw-light m-0 text-justify">El beneficiario tiene derecho a designar a un beneficiario(s) sustituto(s) que recibirán
+                    todos los derechos y obligaciones que se deriven del contrato de fideicomiso en caso de que el beneficiario
+                    muera durante la vigencia del Fideicomiso. Con esta designación de beneficiario alterno, sus
+                    herederos no necesitan realizar ningún trámite sucesorio ante los tribunales mexicanos,
+                    lo que podría llevar tiempo y honorarios de abogados. Usted sólo tendría que notificar al banco
+                    sobre el fallecido, mostrar el acta de defunción y sus identificaciones oficiales.
+                    Luego, el banco instruirá al notario público para que formalice los documentos con la
+                    consecuente acción de registrar a los nuevos propietarios (beneficiarios) del inmueble en
+                    fideicomiso.</p>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+          <div ngbAccordionItem [collapsed]="true" class="border-0 mb-2">
+            <h2 ngbAccordionHeader>
+              <button ngbAccordionButton class="text-bg-light shadow-none rounded-3 fs-5 fw-light">
+                ¿Cuánto dura un fideicomiso?
+              </button>
+            </h2>
+            <div ngbAccordionCollapse class="">
+              <div ngbAccordionBody>
+                <ng-template>
+                  <p class="fs-5 fw-light m-0 text-justify">Normalmente, un fideicomiso se establece por 50 años y puede renovarse por otros 50 años. De hecho, los fideicomisos pueden renovarse en cualquier momento mediante una solicitud. Otro concepto erróneo y preocupante es que después de 50 años las propiedades en el fideicomiso pasan a las autoridades, lo cual no es cierto.</p>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+          <div ngbAccordionItem [collapsed]="true" class="border-0 mb-2">
+            <h2 ngbAccordionHeader>
+              <button ngbAccordionButton class="text-bg-light shadow-none rounded-3 fs-5 fw-light">
+                ¿Qué tan seguros son los bancos mexicanos? ¿Puedo confiar en los fideicomisos?
+              </button>
+            </h2>
+            <div ngbAccordionCollapse class="">
+              <div ngbAccordionBody>
+                <ng-template>
+                  <p class="fs-5 fw-light m-0 text-justify">Sí. El banco mexicano tiene la responsabilidad como fiduciario de actuar en beneficio del
+                    beneficiario bajo pena de ley. El banco simplemente conservará las escrituras de la
+                    propiedad en su nombre (o en el de sus beneficiarios). Usted, como beneficiario, tiene los
+                    derechos sobre la propiedad. Puede vender, arrendar, alquilar, construir o hacer cualquier cosa que un propietario legal de una propiedad en México pueda hacer (obviamente, debe obedecer las normas de construcción y zonificación). Muchos bancos grandes y respetables de Estados Unidos y del mundo, como
+                    GE Capital, Scotiabank y Santander Serfin, entre otros, han sido y
+                    siguen siendo actores clave para los fideicomisos en México.</p>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+          <div ngbAccordionItem [collapsed]="true" class="border-0 mb-2">
+            <h2 ngbAccordionHeader>
+              <button ngbAccordionButton class="text-bg-light shadow-none rounded-3 fs-5 fw-light">
+                ¿Qué hace un Notario? Hemos escuchado que deberíamos utilizar uno.
+              </button>
+            </h2>
+            <div ngbAccordionCollapse class="">
+              <div ngbAccordionBody>
+                <ng-template>
+                  <p class="fs-5 fw-light m-0 text-justify">El Notario Público juega un papel importante en la compra y venta de Bienes Raíces,
+                    mucho más importante que en la mayoría de los países. El gobernador del estado designa al
+                    notario público como responsable de la ejecución de varios aspectos clave de la
+                    transacción, como la autenticación de documentos legales, la búsqueda de títulos y escrituras de propiedad (gravámenes u otros asuntos legales y financieros), la recaudación de impuestos,
+                    las revisiones de permisos de construcción (si corresponde), las ganancias de capital, el cálculo de impuestos, etc. En resumen,
+                    el notario es responsable de ratificar las transacciones de Bienes Raíces. Por lo tanto, si la
+                    transacción de la propiedad se lleva a cabo sin un notario y no se registra en el registro público,
+                    entonces es inválida, colocando al comprador en una posición en la que puede perder la propiedad sin recurso legal.</p>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+          <div ngbAccordionItem [collapsed]="true" class="border-0 mb-2">
+            <h2 ngbAccordionHeader>
+              <button ngbAccordionButton class="text-bg-light shadow-none rounded-3 fs-5 fw-light">
+                ¿Cómo es el proceso de compra típico en México?
+              </button>
+            </h2>
+            <div ngbAccordionCollapse class="">
+              <div ngbAccordionBody>
+                <ng-template>
+                  <p class="fs-5 fw-light m-0 text-justify">En términos generales, el proceso de transacción de Bienes Raíces se “cierra” una vez que el vendedor
+                    acepta una oferta de compra por escrito y tanto el vendedor como el comprador firman un contrato de compraventa. En Grupo MIROH la presentación de una oferta es segura ya que el depósito
+                    nunca excede el 5% del precio ofrecido y está protegido por la Propiedad Inmobiliaria. Generalmente, se requiere un pago del 10-30% como depósito cuando se firma el contrato de promesa de
+                    venta. Normalmente, los desarrollos y preventas requieren un depósito del
+                    30% o más, mientras que para las reventas el depósito será menor. El resto normalmente se paga
+                    al momento de firmar las escrituras ante el Notario. Si está tratando directamente con el
+                    vendedor, se recomienda encarecidamente que busque la orientación de un abogado o agente
+                    de Bienes Raíces antes de firmar cualquier contrato o intercambiar dinero (especialmente porque los contratos legalmente vinculantes en México serán en español).</p>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+          <div ngbAccordionItem [collapsed]="true" class="border-0 mb-2">
+            <h2 ngbAccordionHeader>
+              <button ngbAccordionButton class="text-bg-light shadow-none rounded-3 fs-5 fw-light">
+                ¿Existen opciones de financiamiento disponibles que me ayuden a comprar bienes raíces en México?
+              </button>
+            </h2>
+            <div ngbAccordionCollapse class="">
+              <div ngbAccordionBody>
+                <ng-template>
+                  <p class="fs-5 fw-light m-0 text-justify">En primer lugar, es importante tener en cuenta que los nuevos desarrollos y proyectos en México que
+                    aún están en preventa a veces ofrecen ciertos plazos de pago. Además,
+                    hay financiación disponible para ciudadanos de México, Estados Unidos, Canadá, Reino Unido y España.
+                    También hay una serie de instituciones financieras mexicanas locales que han estado
+                    mejorando drásticamente su servicio y la velocidad de las transacciones bancarias como los préstamos, además de ofrecer tasas de interés más bajas para atraer compradores. Estaremos encantados de
+                    ponerlo en contacto con alguien de confianza que pueda ayudarlo.</p>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+          <div ngbAccordionItem [collapsed]="true" class="border-0 mb-2">
+            <h2 ngbAccordionHeader>
+              <button ngbAccordionButton class="text-bg-light shadow-none rounded-3 fs-5 fw-light">
+                ¿Cómo se calculan los costos de cierre y quién los paga?
+              </button>
+            </h2>
+            <div ngbAccordionCollapse class="">
+              <div ngbAccordionBody>
+                <ng-template>
+                  <p class="fs-5 fw-light m-0 text-justify">Los costos de cierre se determinan según el precio de venta. El valor se convierte en la base para
+                    todos los impuestos y tarifas aplicables. En general, el comprador es responsable del impuesto de transferencia y el costo de establecer el fideicomiso (si aún no existe), los honorarios del notario, los honorarios de registro, los honorarios del impuesto de tasación y los honorarios fiduciarios del permiso. El
+                    costo total promedio del cierre del comprador es aproximadamente el 6 % del precio de compra.</p>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+          <div ngbAccordionItem [collapsed]="true" class="border-0 mb-2">
+            <h2 ngbAccordionHeader>
+              <button ngbAccordionButton class="text-bg-light shadow-none rounded-3 fs-5 fw-light">
+                ¿Cuál es la mejor manera de encontrar una propiedad en la Riviera Maya?
+              </button>
+            </h2>
+            <div ngbAccordionCollapse class="">
+              <div ngbAccordionBody>
+                <ng-template>
+                  <p class="fs-5 fw-light m-0 text-justify">La Riviera Maya está llena de agentes inmobiliarios, corredores, empresas constructoras,
+                    desarrolladores, promotores, etc. Todos ellos con la esperanza de obtener ganancias. Como con cualquier compra importante, es importante que te sientas cómodo con las personas con las que trabajas.
+                    Además, debes saber que tu mejor interés está en el corazón y que tus necesidades están siendo satisfechas.</p>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+          <div ngbAccordionItem [collapsed]="true" class="border-0 mb-2">
+            <h2 ngbAccordionHeader>
+              <button ngbAccordionButton class="text-bg-light shadow-none rounded-3 fs-5 fw-light">
+                ¿Por qué Miroh Master Broker?
+              </button>
+            </h2>
+            <div ngbAccordionCollapse class="">
+              <div ngbAccordionBody>
+                <ng-template>
+                  <p class="fs-5 fw-light m-0 text-justify">Contamos con un equipo de expertos en inversiones inmobiliarias, representantes legales internos, estrechas relaciones de trabajo con notarios, bancos y compañías de
+                    seguros de títulos locales. Brindamos asesores inmobiliarios éticos y expertos
+                    para que estén a su lado de principio a fin. Nuestros asesores de inversiones tienen la experiencia
+                    para guiar su inversión y brindar una experiencia positiva en general. Somos un
+                    equipo de profesionales que conocen perfectamente el mercado local, especializados en retorno de inversión y plusvalía. Si está interesado en Tulum, Playa del Carmen,
+                    Cancún, Cozumel o cualquier lugar del Caribe mexicano, somos la mejor opción.</p>
+                </ng-template>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="text-bg-light py-5">
+  <div class="container">
+    <div class="d-flex align-items-center justify-content-center mb-5">
+      <div class="d-flex align-items-center justify-content-center flex-column p-4 text-bg-white mx-4" style="width: 300px; height: 300px; border-radius: 50%;" data-aos="fade-up" data-aos-duration="1000">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="rgba(0,0,0,0.4)" class="bi bi-person-hearts mb-2" viewBox="0 0 16 16">
+          <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+        </svg>
+        <h4 class="text-center mb-2">Amplio portafolio</h4>
+        <p class="fs-5 fw-light m-0 text-center">Contamos con un amplio portafolio de desarrollos <br> de lujo.</p>
+      </div>
+      <div class="d-flex align-items-center justify-content-center flex-column p-4 text-bg-white mx-4" style="width: 300px; height: 300px; border-radius: 50%;" data-aos="fade-up" data-aos-duration="1000">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="rgba(0,0,0,0.4)" class="bi bi-people-fill mb-2" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"/>
+        </svg>
+        <h4 class="text-center mb-2">Mayor rentabilidad</h4>
+        <p class="fs-5 fw-light m-0 text-center">Tenemos la mayor rentabilidad en inversiones de largo, mediano y corto plazo.</p>
+      </div>
+      <div class="d-flex align-items-center justify-content-center flex-column p-4 text-bg-white mx-4" style="width: 300px; height: 300px; border-radius: 50%;" data-aos="fade-up" data-aos-duration="1000">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="rgba(0,0,0,0.4)" class="bi bi-person-hearts mb-2" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M11.5 1.246c.832-.855 2.913.642 0 2.566-2.913-1.924-.832-3.421 0-2.566M9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4m13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276ZM15 2.165c.555-.57 1.942.428 0 1.711-1.942-1.283-.555-2.281 0-1.71Z"/>
+        </svg>
+        <h4 class="text-center mb-2">Opciones flexibles</h4>
+        <p class="fs-5 fw-light m-0 text-center">Contamos con las mejores opciones flexibles de financiamiento.</p>
+      </div>
+    </div>
+    <div class="d-flex align-items-center justify-content-center">
+      <div class="d-flex align-items-center justify-content-center flex-column p-4 text-bg-white mx-4" style="width: 300px; height: 300px; border-radius: 50%;" data-aos="fade-up" data-aos-duration="1000">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="rgba(0,0,0,0.4)" class="bi bi-people-fill mb-2" viewBox="0 0 16 16">
+          <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+        </svg>
+        <h4 class="text-center mb-2">Estudio de mercado</h4>
+        <p class="fs-5 fw-light m-0 text-center">Realizamos un estudio de mercado extensivo para tomar las mejores decisiones.</p>
+      </div>
+      <div class="d-flex align-items-center justify-content-center flex-column p-4 text-bg-white mx-4" style="width: 300px; height: 300px; border-radius: 50%;" data-aos="fade-up" data-aos-duration="1000">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="rgba(0,0,0,0.4)" class="bi bi-currency-dollar mb-2" viewBox="0 0 16 16">
+          <path d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z"/>
+        </svg>
+        <h4 class="text-center mb-2">Mejores precios</h4>
+        <p class="fs-5 fw-light m-0 text-center">Tenemos los mejores precios por m2 justos y competitivos.</p>
+      </div>
+      <div class="d-flex align-items-center justify-content-center flex-column p-4 text-bg-white mx-4" style="width: 300px; height: 300px; border-radius: 50%;" data-aos="fade-up" data-aos-duration="1000">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="rgba(0,0,0,0.4)" class="bi bi-person-hearts mb-2" viewBox="0 0 16 16">
+          <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/>
+        </svg>
+        <h4 class="text-center mb-2">Mejores ubicaciones</h4>
+        <p class="fs-5 fw-light m-0 text-center">Estamos en las mejores ubicaciones con la calidad de vida asegurada.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <h2 class="fn-50 text-uppercase d-flex align-items-center justify-content-start" data-aos="fade-right" data-aos-duration="1000"><span class="fn-30 me-2"><i class="bi bi-megaphone-fill"></i></span>Últimas</h2>
+        <h3 class="text-muted text-uppercase fw-bold" data-aos="fade-right" data-aos-duration="1000">Noticias.</h3>
+      </div>
+      <div class="col-8">
+        <div class="row mb-5">
+          @for (item of blogList; track $index) {
+            <div class="col-6 {{(($index > 1) ? 'mt-4' : '')}}" data-aos="fade-up" data-aos-duration="1000">
+              <a [routerLink]="['/noticias', item.slug]" rel="noopener noreferrer" class="text-decoration-none">
+                <article class="property-thumb card border-0 rounded-1 overflow-hidden h-100">
+                  <header class="card-header">
+                    <img src="{{item.hero?.uri}}" class="card-img-top">
+                    <span class="position-absolute end-0 text-warning" style="top: -2px;">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+                        <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2" />
+                      </svg>
+                    </span>
+                  </header>
+                  <main class="card-body">
+                    <p class="card-text text-truncate text-muted fw-normal mb-1"><i class="bi bi-calendar me-2"></i>
+                      <small>{{item.dateCreated | date: 'longDate'}}</small>
+                    </p>
+                    <p class="card-text m-0 mb-3" title="{{item.title}}">{{item.title}}</p>
+                    <p class="text-justify">{{item.description.slice(0, 300)}}...</p>
+                  </main>
+                </article>
+              </a>
+            </div>
+          }
+        </div>
+        <div class="d-flex align-items-center justify-content-end">
+          <a routerLink="/propiedades" class="d-flex align-items-center justify-content-center fn-20" data-aos="fade-right" data-aos-duration="1000">Ver todas las noticias<i class="bi bi-arrow-bar-right fn-30 ms-2"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main-footer></main-footer>
+<div class="w-100 text-bg-light" style="height: 50px;"></div>

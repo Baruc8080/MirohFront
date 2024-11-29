@@ -1,0 +1,46 @@
+<a [routerLink]="['/propiedades', data.slug]" rel="noopener noreferrer" class="text-decoration-none">
+  <article class="property-thumb card border-0 rounded-1 overflow-hidden h-100">
+    <header class="card-header">
+      <img src="{{data.hero?.uri}}" class="card-img-top">
+      @if (data.recommended === 1) {
+        <span class="position-absolute end-0 text-warning" style="top: -2px;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-bookmark-fill" viewBox="0 0 16 16">
+            <path d="M2 2v13.5a.5.5 0 0 0 .74.439L8 13.069l5.26 2.87A.5.5 0 0 0 14 15.5V2a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2" />
+          </svg>
+        </span>
+      }
+      <div class="tags d-flex flex-wrap gap-1">
+        <span class="badge d-flex justify-content-center align-items-center lh-sm fw-normal bg-primary">Folio: {{data.foil}}</span>
+        <span class="badge d-flex justify-content-center align-items-center lh-sm fw-normal bg-success">{{data.type}}</span>
+        <span class="badge d-flex justify-content-center align-items-center lh-sm fw-normal bg-success">{{data.status}}</span>
+      </div>
+      <div class="price">
+        <p class="m-0"><span>{{((data.priceFrom == true) ? 'DESDE ' : '')}}</span><span>{{data.price | currency: 'MXN'}}</span><span> {{data.currency}}</span></p>
+      </div>
+    </header>
+    <main class="card-body">
+      <p class="card-text text-truncate text-muted fw-normal mb-1"><i class="bi bi-geo-fill me-1"></i>
+        <small>{{data.city}}, {{data.state}}, {{data.address}}.</small>
+      </p>
+      <p class="card-text m-0" title="{{data.title}}">{{data.title}}</p>
+    </main>
+    @if ((data?.areaConstruction != null && data?.areaConstruction != "") || (data?.area != null && data?.area > 0) || (data?.room != null && data?.room > 0) || (data?.bath != null && data?.bath > 0) || (data?.floor != null && data?.floor > 0)) {
+      <footer class="card-footer">
+        <p class="d-flex gap-1 m-0 text-muted m-0">
+          @if ((data.areaConstruction != null && data.areaConstruction > 0) || (data.area != null && data.area > 0)) {
+            <span>{{((data.areaConstruction != null && data.areaConstruction > 0) ? data.areaConstruction : '')}}{{((data.areaConstruction != null && data.areaConstruction > 0 && data.area != null && data.area > 0) ? '/' : '')}}{{((data.area != null && data.area > 0) ? data.area : '')}} m2</span><span>-</span>
+          }
+          @if (data.room != null && data.room > 0) {
+            <span>{{data.room}} Recam.</span><span>-</span>
+          }
+          @if (data.bath != null && data.bath > 0) {
+            <span>{{data.bath}} Baños</span><span>-</span>
+          }
+          @if (data.floor != null && data.floor > 0) {
+            <span>{{data.floor}} Pisos</span>
+          }
+        </p>
+      </footer>
+    }
+  </article>
+</a>

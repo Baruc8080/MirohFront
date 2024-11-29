@@ -1,0 +1,148 @@
+// PrimeNG
+.p-dropdown-panel .p-dropdown-items,
+.p-column-filter-row-items {
+  margin-bottom: 0px;
+  padding: 0px;
+}
+
+.p-inputtext {
+  font-size: 1em;
+}
+
+.p-dropdown span[role="combobox"] .ng-star-inserted {
+  display: flex;
+  height: 100%;
+  font-size: 1em;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.p-dropdown-panel .p-dropdown-items .p-dropdown-item.p-highlight {
+  background: var(--bs-primary) !important;
+}
+
+.p-overlay {
+  left: -1px !important;
+
+  ul[role="listbox"] {
+    margin-bottom: 0px !important;
+    padding: 0px !important;
+  }
+}
+
+// Bootstrap
+.btn-outline-primary {
+  --bs-btn-hover-color: #fff;
+}
+
+// Theme
+.h-50px {
+  height: 50px !important;
+}
+
+section.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+
+  &.hero-overlay::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0), var(--bs-primary));
+    // background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+
+  .hero-title {
+    letter-spacing: -3px;
+    line-height: 36px;
+    font-size: 3.5rem;
+  }
+
+  .hero-text {
+    opacity: 0.8;
+    font-weight: 300;
+  }
+}
+
+// Custom
+p, h1, h2, h3, h4, h5, h6, figure {
+  margin: 0px;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.text-bg-white {
+  background-color: #fff !important;
+}
+
+.h-100vh {
+  height: 100vh !important;
+}
+
+.mh-100vh {
+  min-height: 100vh !important;
+}
+
+// Font Sizes
+.fn-100 {
+  font-size: 100px !important;
+}
+
+.fn-90 {
+  font-size: 90px !important;
+}
+
+.fn-80 {
+  font-size: 80px !important;
+}
+
+.fn-70 {
+  font-size: 70px !important;
+}
+
+.fn-60 {
+  font-size: 60px !important;
+}
+
+.fn-50 {
+  font-size: 50px !important;
+}
+
+.fn-40 {
+  font-size: 40px !important;
+}
+
+.fn-30 {
+  font-size: 30px !important;
+}
+
+.fn-20 {
+  font-size: 20px !important;
+}
+
+.fn-18 {
+  font-size: 18px !important;
+}
+
+.fn-16 {
+  font-size: 16px !important;
+}
+
+.fn-14 {
+  font-size: 14px !important;
+}
+
+.fn-12 {
+  font-size: 12px !important;
+}

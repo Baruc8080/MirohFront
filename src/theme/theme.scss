@@ -1,0 +1,33 @@
+$font-family-sans-serif: "Roboto Flex", sans-serif;
+
+@import "./variables";
+
+/* Importing Bootstrap Icons SCSS file. */
+@import "bootstrap-icons";
+
+/* Importing Bootstrap. */
+@import "bootstrap/scss/functions";
+@import "./bootstrap/variables.scss";
+@import "bootstrap/scss/bootstrap";
+@import "./bootstrap/components/button";
+@import "./bootstrap/components/dropdown";
+@import "./bootstrap/components/popover";
+@import "./bootstrap/components/sizing";
+@import "./bootstrap/components/table";
+@import "./bootstrap/components/form-control";
+
+/* Importing PrimeIcons. */
+@import "primeicons/primeicons.css";
+
+/* Importing PrimeNG. */
+@import "./primeng/themes/mytheme/theme.scss";
+@import "primeng/resources/primeng.css";
+
+/* Importing fonts. */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap');
+
+/* Importing custom. */
+@import "sizing";
+@import "custom";

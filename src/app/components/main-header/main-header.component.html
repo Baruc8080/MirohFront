@@ -1,0 +1,62 @@
+<header id="main-header" class="{{((this.floatingBottom == true) ? 'floatingBottom' : 'floatingTop')}}">
+  <nav class="navbar navbar-expand-lg py-4">
+    <div class="container flex-lg-row flex-nowrap align-items-center position-relative">
+      <div class="navbar-brand w-100 m-0"></div>
+      <div class="w-100 d-none d-lg-block"></div>
+      <div class="w-100 d-flex align-items-center justify-content-end">
+        <a class="fn-12 text-bg-primary text-light d-flex align-items-center justify-content-center h-50px rounded-2 px-3 text-uppercase" style="cursor: pointer;" (click)="open(offcanvas)" @enterState><i class="bi bi-list fn-20 me-1"></i> Menú</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<ng-template #mainMenu>
+  <ul class="navbar-nav justify-content-center">
+    <li class="nav-item">
+      <a routerLink="/" routerLinkActive="active" class="nav-link" (click)="close(offcanvas)" [@openState]="openState">INICIO</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/propiedades" routerLinkActive="active" class="nav-link" (click)="close(offcanvas)">NUESTRAS PROPIEDADES</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/noticias" routerLinkActive="active" class="nav-link" (click)="close(offcanvas)">NOTICIAS</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/nosotros" routerLinkActive="active" class="nav-link" (click)="close(offcanvas)">NOSOTROS</a>
+    </li>
+    <li class="nav-item">
+      <a href="#preguntas-frecuentes" routerLinkActive="active" class="nav-link" (click)="close(offcanvas)">FAQS</a>
+    </li>
+    <li class="nav-item">
+      <a href="https://map.mirohmasterbroker.com/index.php" target="_blank" routerLinkActive="active" class="nav-link">MAPA</a>
+    </li>
+    <li class="nav-item">
+      <a href="#contacto" routerLinkActive="active" class="nav-link" (click)="close(offcanvas)">CONTACTO</a>
+    </li>
+  </ul>
+</ng-template>
+
+<ng-template #offcanvas let-offcanvas>
+  <div class="offcanvas-header justify-content-between">
+    <p-button icon="pi pi-times" [rounded]="true" [text]="true" (click)="offcanvas.dismiss()"></p-button>
+  </div>
+  <div class="offcanvas-body d-flex flex-column h-100">
+    <ng-container *ngTemplateOutlet="mainMenu"></ng-container>
+    <div class="offcanvas-footer">
+      <div>
+        <a href="mailto:info&#64;mirohmasterbroker.com" target="_blank" class="link-inverse">info&#64;mirohmasterbroker.com</a>
+        <br>
+        <a href="https://api.whatsapp.com/send?phone=520123456789" target="_blank">+52 (012) 345 6789</a>
+        <br>
+        <nav class="nav social mt-4">
+          <a role="button" href="https://api.whatsapp.com/send?phone=520123456789" target="_blank"><i class="bi bi-whatsapp"></i></a>
+          <a role="button" href="https://facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
+          <a role="button" href="https://instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a role="button" href="https://youtube.com/" target="_blank"><i class="bi bi-youtube"></i></a>
+          <a role="button" href="https://tiktok.com/" target="_blank"><i class="bi bi-tiktok"></i></a>
+          <a role="button" href="https://linkedin.com/" target="_blank"><i class="bi bi-linkedin"></i></a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</ng-template>

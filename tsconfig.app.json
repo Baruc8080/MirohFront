@@ -1,0 +1,40 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/app",
+    "types": [],
+    "paths": {
+      "@environments/*": [
+        "./src/environments/*"
+      ],
+      "@directives/*": [
+        "./src/app/directives/*"
+      ],
+      "@guards/*": [
+        "./src/app/guards/*"
+      ],
+      "@utils/*": [
+        "./src/app/utils/*"
+      ],
+      "@services/*": [
+        "./src/app/services/*"
+      ],
+      "@pipes/*": [
+        "./src/app/pipes/*"
+      ],
+      "@components/*": [
+        "./src/app/components/*"
+      ],
+      "@pages/*": [
+        "./src/app/pages/*"
+      ],
+    }
+  },
+  "files": [
+    "src/main.ts"
+  ],
+  "include": [
+    "src/**/*.d.ts"
+  ]
+}

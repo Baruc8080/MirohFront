@@ -1,0 +1,29 @@
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger,
+.btn-dark {
+  --bs-btn-color: #fff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-active-color: #bebebe;
+}
+
+.btn-sm {
+  & .btn-primary,
+  &.btn-secondary,
+  &.btn-success,
+  &.btn-info,
+  &.btn-warning,
+  &.btn-danger,
+  &.btn-dark {
+    --bs-btn-color: #fff;
+    --bs-btn-hover-color: #fff;
+  }
+}
+
+.btn-sm,
+.btn-group-sm > .btn {
+  --bs-btn-border-radius: var(--bs-border-radius);
+}

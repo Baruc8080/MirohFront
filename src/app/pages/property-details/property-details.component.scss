@@ -1,0 +1,15 @@
+.section-title {
+  line-height: 1em !important;
+  letter-spacing: -2px !important;
+}
+
+.accordion-item {
+  --bs-accordion-border-width: 0;
+  .accordion-header {
+    .accordion-button {
+      --bs-accordion-active-bg: var(--bs-light);
+      --bs-accordion-active-color: #000;
+      --bs-accordion-btn-bg: var(--bs-light);
+    }
+  }
+}

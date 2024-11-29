@@ -1,0 +1,112 @@
+<main-header></main-header>
+
+<section class="hero hero-overlay d-flex align-items-end justify-content-end flex-column py-5" style="background-image: url('./assets/images/cover2.jpg'); background-position: center;">
+  <div class="container position-relative d-flex align-items-start justify-content-start flex-column">
+    <h1 class="mb-2 text-light fn-60 text-uppercase" data-aos="fade-up" data-aos-duration="1000">Nuestras Propiedades</h1>
+    <p class="hero-text mb-0 fs-5 text-light" style="max-width:600px;" data-aos="fade-up" data-aos-duration="1000">Contamos con un amplio portafolio de desarrollos de lujo en la hermosa Riviera Maya, con la mayor rentabilidad en inversiones, las mejores ubicaciones, los mejores precios por m2 y opciones de financiamiento flexibles.</p>
+  </div>
+</section>
+
+<section class="properties py-5">
+  <div class="container">
+    <div class="filter p-3">
+      <div class="d-flex gap-3 justify-content-between flex-wrap"  data-aos="fade-up" data-aos-duration="1000">
+        <div class="d-flex gap-3">
+          <p-button label="{{((filterPanelShow === true) ? 'Ocultar' : 'Mostrar')}} Filtros" icon="bi bi-sliders" styleClass="rounded-2" (click)="filterPanelShow = (filterPanelShow === false) ? true : false" />
+        </div>
+        <div class="d-flex gap-3">
+          <p class="d-flex flex-column justify-content-center text-muted m-0 opacity-50">({{propertiesListFilter.length}}) Resultados</p>
+          <button type="button" class="btn" (click)="clearFilter()"><i class="bi bi-arrow-clockwise"></i> Limpiar busqueda</button>
+        </div>
+      </div>
+      @if (filterPanelShow === true) {
+        <div [formGroup]="filterForm" class="mt-3" data-aos="fade-up" data-aos-duration="1000">
+          <div class="d-inline-block me-2 mb-2">
+            <p-dropdown formControlName="location" [options]="locationsList" optionLabel="label" optionValue="value" showClear="true" filterBy="label" placeholder="Ubicación" styleClass="h-50px" (onChange)="onFilterLocationChange()" [filter]="true" emptyMessage="No hay resultados" emptyFilterMessage="No se encontraron resultados">
+              <ng-template pTemplate="selectedItem" let-selectedOption>
+                <div>{{ selectedOption.label }}</div>
+              </ng-template>
+              <ng-template let-item pTemplate="item">
+                <div class="pe-4">{{ item.label }}</div>
+              </ng-template>
+            </p-dropdown>
+          </div>
+          <div class="d-inline-block me-2 mb-2">
+            <p-dropdown formControlName="typeProperty" [options]="typePropertiesList" optionLabel="label" optionValue="value" showClear="true" filterBy="label" placeholder="Tipo de inmueble" styleClass="h-50px" (onChange)="onFilterTypePropertyChange()">
+              <ng-template pTemplate="selectedItem" let-selectedOption>
+                <div>{{ selectedOption.label }}</div>
+              </ng-template>
+              <ng-template let-item pTemplate="item">
+                <div class="pe-4">{{ item.label }}</div>
+              </ng-template>
+            </p-dropdown>
+          </div>
+          <div class="d-inline-block me-2 mb-2">
+            <p-dropdown formControlName="rooms" [options]="roomsList" optionLabel="name" optionValue="value" showClear="true" filterBy="name" placeholder="Recamaras" styleClass="h-50px" (onChange)="onFilterRoomChange()">
+              <ng-template pTemplate="selectedItem" let-selectedOption>
+                <div>{{ selectedOption.name }} Recámaras</div>
+              </ng-template>
+              <ng-template let-item pTemplate="item">
+                <div class="ps-2">{{ item.name }}</div>
+              </ng-template>
+            </p-dropdown>
+          </div>
+          <div class="d-inline-block me-2 mb-2">
+            <p-dropdown formControlName="bath" [options]="bathList" optionLabel="name" optionValue="value" showClear="true" filterBy="name" placeholder="Baños" styleClass="h-50px" (onChange)="onFilterBathChange()">
+              <ng-template pTemplate="selectedItem" let-selectedOption>
+                <div>{{ selectedOption.name }} Baños</div>
+              </ng-template>
+              <ng-template let-item pTemplate="item">
+                <div class="ps-2">{{ item.name }}</div>
+              </ng-template>
+            </p-dropdown>
+          </div>
+          <div class="d-inline-block me-2 mb-2">
+            <p-dropdown formControlName="status" [options]="statusList" optionLabel="label" optionValue="value" showClear="true" filterBy="label" placeholder="Estatus" styleClass="h-50px" (onChange)="onFilterStatusChange()">
+              <ng-template pTemplate="selectedItem" let-selectedOption>
+                <div>{{ selectedOption.label }}</div>
+              </ng-template>
+              <ng-template let-item pTemplate="item">
+                <div class="pe-4">{{ item.label }}</div>
+              </ng-template>
+            </p-dropdown>
+          </div>
+          <div class="d-inline-block me-2 mb-2">
+            <div ngbDropdown class="d-inline-block"> <button type="button" class="btn h-50px text-bg-white border-1 border-dark-subtle" id="" ngbDropdownToggle>Precio: {{filterPrice.value[0] | currency: 'MXN'}} - {{filterPrice.value[1] | currency: 'MXN'}}</button>
+              <div class="p-3" ngbDropdownMenu aria-labelledby="">
+                <div class="p-3 mb-2">
+                  <p-slider formControlName="price" [range]="true" [min]="0" [max]="25000000" (onChange)="onFilterPriceChange()" />
+                </div>
+                <div class="d-flex gap-3">
+                  <div class="form-floating" style="width: 170px;"> <input type="text" class="form-control border-1" value="{{filterPrice.value[0] | currency: 'MXN'}}" disabled> <label>Mínimo</label> </div>
+                  <div class="form-floating" style="width: 170px;"> <input type="email" class="form-control border-1" value="{{filterPrice.value[1] | currency: 'MXN'}}" disabled> <label>Máximo</label> </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-inline-block me-2 mb-2">
+            <p-dropdown formControlName="orderby" [options]="orderList" optionLabel="name" optionValue="value" filterBy="name" placeholder="Ordenar por" styleClass="h-50px" (onChange)="onFilterOrderbyChange()">
+              <ng-template pTemplate="selectedItem" let-selectedOption>
+                <div>Ordenar por: {{ selectedOption.name }}</div>
+              </ng-template>
+              <ng-template let-item pTemplate="item">
+                <div class="pe-4">{{ item.name }}</div>
+              </ng-template>
+            </p-dropdown>
+          </div>
+        </div>
+      }
+    </div>
+    <div class="px-3 pb-4">
+      <div class="row g-3">
+        @for (item of propertiesListFilter; track $index) {
+        <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-duration="1000">
+          <property-thumb [data]="item"></property-thumb>
+        </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<main-footer></main-footer>

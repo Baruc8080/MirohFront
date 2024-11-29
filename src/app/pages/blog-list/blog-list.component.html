@@ -1,0 +1,48 @@
+<main-header></main-header>
+
+<section class="hero hero-overlay d-flex align-items-end justify-content-end flex-column py-5" style="background-image: url('./assets/images/cover3.jpg'); background-position: center;">
+  <div class="container position-relative d-flex align-items-start justify-content-start flex-column">
+    <h1 class="mb-2 text-light fn-70 text-uppercase" data-aos="fade-up" data-aos-duration="1000">Noticias</h1>
+    <p class="hero-text mb-0 fs-5 text-light" style="max-width:600px;" data-aos="fade-up" data-aos-duration="1000">Te brindamos la información mas relevante y precisa. Somos una fuente confiable de noticias actualizadas y análisis profundos. Te mantenemos informado de los temas que importan.</p>
+  </div>
+</section>
+
+<section class="pt-5">
+  <div class="container">
+    <h2 class="fn-50 text-uppercase d-flex align-items-center justify-content-start" data-aos="fade-right" data-aos-duration="1000"><span class="fn-30 me-2"><i class="bi bi-instagram"></i></span>Feed de</h2>
+    <h3 class="text-muted text-uppercase fw-bold" data-aos="fade-right" data-aos-duration="1000">Instagram.</h3>
+    <div style="position: relative;" data-aos="fade-up" data-aos-duration="1000">
+      <iframe src="https://54b207c8972145049d819db663f39d4b.elf.site/" frameborder="0" width="100%" height="800px"></iframe>
+      <div class="d-flex align-items-center justify-content-center" style="position: absolute; left: 0px; right: 0px; bottom: 0px; height: 80px; background-color: #fff;"></div>
+    </div>
+  </div>
+</section>
+
+<section class="pb-5">
+  <div class="container">
+    <div class="row">
+      <h2 class="fn-50 text-uppercase d-flex align-items-center justify-content-start" data-aos="fade-right" data-aos-duration="1000"><span class="fn-30 me-2"><i class="bi bi-blockquote-right"></i></span>Artículos del</h2>
+      <h3 class="text-muted text-uppercase fw-bold mb-5" data-aos="fade-right" data-aos-duration="1000">Blog.</h3>
+      @for (item of blogList; track $index) {
+        <div class="col-4 {{(($index > 2) ? 'mt-4' : '')}}" data-aos="fade-up" data-aos-duration="1000">
+          <a [routerLink]="['/noticias', item.slug]" rel="noopener noreferrer" class="text-decoration-none">
+            <article class="property-thumb card border-0 rounded-1 overflow-hidden h-100">
+              <header class="card-header">
+                <img src="{{item.hero?.uri}}" class="card-img-top">
+              </header>
+              <main class="card-body">
+                <p class="card-text text-truncate text-muted fw-normal mb-1"><i class="bi bi-calendar me-2"></i>
+                  <small>{{item.dateCreated | date: 'longDate'}}</small>
+                </p>
+                <p class="card-text m-0 mb-3" title="{{item.title}}">{{item.title}}</p>
+                <p class="text-justify">{{item.description.slice(0, 300)}}...</p>
+              </main>
+            </article>
+          </a>
+        </div>
+      }
+    </div>
+  </div>
+</section>
+
+<main-footer></main-footer>

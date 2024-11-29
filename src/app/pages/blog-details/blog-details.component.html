@@ -1,0 +1,31 @@
+<main-header></main-header>
+
+<section>
+  <figure class="w-100 m-0">
+    <img src="{{this.blog.hero.uri}}" class="w-100 object-fit-cover rounded-2" style="height: 600px;">
+  </figure>
+  <div class="container">
+    <div class="card border-0 rounded-1 overflow-hidden">
+      <div class="card-body p-5">
+        <div class="d-flex align-items-center gap-5 mb-4">
+          <h6 class="d-flex align-items-center gap-3 mb-0">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-calendar"
+                viewBox="0 0 16 16">
+                <path
+                  d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+              </svg>
+            </span>
+            <span>{{this.blog.dateCreated | date: 'longDate'}}</span>
+          </h6>
+        </div>
+        <h4 class="card-title fs-4 fw-bold mb-4">{{this.blog.title}}</h4>
+        <div>
+          <div [innerHTML]="this.blog.content" class="text-justify"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main-footer></main-footer>

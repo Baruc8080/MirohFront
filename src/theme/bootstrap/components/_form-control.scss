@@ -1,0 +1,10 @@
+.form-control {
+  &:hover {
+    border-color: var(--bs-primary);
+  }
+
+  &:focus {
+    border-color: var(--bs-primary);
+    border-width: 2px;
+  }
+}
